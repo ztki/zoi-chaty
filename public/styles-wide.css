@@ -1,0 +1,167 @@
+:root {
+    --light-red-color: hsla(0, 66%, 66%, 0.8);
+    --light-green-color: hsla(125, 66%, 66%, 0.8);
+    --white-color: hsla(120, 0%, 90%, 0.8);
+    --purple-color: hsla(273, 66%, 66%, 0.8);
+    --pink-color: hsla(330, 66%, 66%, 0.8);
+    
+    --bg-color: rgba(36, 36, 36, 0.8);
+    --text-color: #dfdfdf;
+    --text-glow: rgba(238, 238, 238, 0.9);
+}
+
+body {
+    font-family: "Advent Pro", Arial, sans-serif;
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hide scrollbar */
+#chat::-webkit-scrollbar {
+    display: none;
+}
+
+#chat ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    overflow-x: hidden;
+    overflow-y: clip;
+}
+
+/* Profile pictures */
+#chat a.pfp {
+    position: relative;
+    top: 15px;
+    margin-bottom: -30px;
+    margin-right: -9px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+#chat a.pfp img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-right: -10px;
+}
+
+/* Username styling */
+#chat a.name {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--white-color);
+    border-radius: 5px;
+    position: relative;
+    top: -30px;
+    margin: 2px 9px 2px 9px;
+    padding: 4px 10px 4px 10px;
+    text-decoration: none;
+}
+
+/* Message */
+#chat div {
+    animation: slideIn 0.4s ease-out;
+    box-sizing: border-box;
+    font-weight: 500;
+    padding: 5px;
+    max-width: 2500px;
+    /* lobattWide */
+}
+
+/* Badge-specific profile picture borders */
+#chat div.broadcaster a.pfp img {
+    border: 3px solid var(--light-red-color);
+}
+
+#chat div.moderator a.pfp img {
+    border: 3px solid var(--light-green-color);
+}
+
+#chat div.subscriber a.pfp img {
+    border: 3px solid var(--purple-color);
+}
+
+#chat div.user a.pfp img {
+    border: 3px solid var(--white-color);
+}
+
+/* Message */
+#chat div.text {
+    overflow-wrap: break-word;
+    padding-left: 10px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--text-glow);
+    border-radius: 5px;
+    margin: -26px 0 0 85px;
+    min-height: 71px;
+    align-content: center;
+}
+
+/* Emotes in messages */
+#chat div.text img {
+    margin-top: 5px;
+    vertical-align: middle;
+}
+
+/* Pronoun indicators */
+#chat a.name::after {
+    font-size: 0.8em;
+    opacity: 0.7;
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+#chat a.hehim::after {
+    content: " [he/him]";
+}
+
+#chat a.sheher::after {
+    content: " [she/her]";
+}
+
+#chat a.hethem::after {
+    content: " [he/they]";
+}
+
+#chat a.shethem::after {
+    content: " [she/they]";
+}
+
+#chat a.other::after {
+    content: " [other]";
+}
+
+#chat a.any::after {
+    content: " [any]";
+}
+
+#chat a.theythem::after {
+    content: " [they/them]";
+}
+
+#chat a.faefaer::after {
+    content: " [fae/faer]";
+}
+
+#chat a.itits::after {
+    content: " [it/its]";
+}
+
+/* simple animation for sliding in messages */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

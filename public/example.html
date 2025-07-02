@@ -1,0 +1,63 @@
+<!-- 
+This is an example HTML for testing out how the chat looks.
+change the styles.css file to change the look of the chat.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <div id="chat">
+        <ul id="messages">
+
+            <div class="broadcaster" id="7da68174-88fa-49e3-86f0-d8851b7cc274">
+                <a class="pfp">
+                    <img
+                        src="https://static-cdn.jtvnw.net/jtv_user_pictures/32f5e28d-e7c7-4443-aafb-44b38b2a01a7-profile_image-300x300.png">
+                </a>
+                <a class="name any">zoiteki</a>
+                <div class="text">hi is this thing working</div>
+            </div>
+            <div class="subscriber" id="7da68174-88fa-49e3-86f0-d8851b7cc274">
+                <a class="pfp">
+                    <img
+                        src="https://static-cdn.jtvnw.net/jtv_user_pictures/63b84fff-f5cb-4543-9096-32e39217d5c3-profile_image-300x300.jpeg">
+                </a>
+                <a class="name">dot_lvl</a>
+                <div class="text">zoi check your dms</div>
+            </div>
+            <div class="moderator" id="7da68174-88fa-49e3-86f0-d8851b7cc274">
+                <a class="pfp">
+                    <img
+                        src="https://static-cdn.jtvnw.net/jtv_user_pictures/1ca853b4-f1b2-49ff-9e95-bedbe7858570-profile_image-300x300.png">
+                </a>
+                <a class="name hehim">foung_shui</a>
+                <div class="text"><img
+                        src="https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_33eec52ade9341d0a1dc67cef32c6b0c/default/dark/2.0">
+                </div>
+            </div>
+            <div class="user" id="7da68174-88fa-49e3-86f0-d8851b7cc274">
+                <a class="pfp">
+                    <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/f034cd38-f80c-47ce-b442-319c523395b8-profile_image-300x300.png"
+                        alt="">
+                </a>
+                <a class="name">Voxandra</a>
+                <div class="text">zoi do NOT listen to dot</div>
+            </div>
+        </ul>
+    </div>
+</body>
+
+</html>

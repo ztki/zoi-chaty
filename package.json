@@ -1,0 +1,26 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mkody/twitch-emoticons": "^2.9.1",
+    "comfy.js": "^1.1.27",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "grapheme-splitter": "^1.0.4",
+    "memory-cache": "^0.2.0",
+    "node-cache": "^5.1.2",
+    "node-fetch": "^3.3.2",
+    "sanitize-html": "^2.16.0",
+    "socket.io": "^4.8.1",
+    "tmi.js": "^1.8.5"
+  }
+}

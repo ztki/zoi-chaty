@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/styles-wide.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <div id="chat">
+        <ul id="messages">
+            <% messages.forEach(message=> { %>
+                <div class="<%= message.badge %>" id="<%= message.id %>">
+                    <a class="pfp">
+                        <img src="<%= message.profile_image_url %>" alt="Profile Picture">
+                    </a>
+                    <a class="name <%= message.pronoun %>">
+                        <%= message.user %>
+                    </a>
+                    <div class="text"><%- message.text %></div>
+                </div>
+                <% }); %>
+        </ul>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
