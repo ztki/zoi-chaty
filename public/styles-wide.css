@@ -66,6 +66,7 @@ body {
 /* Message */
 #chat div {
     animation: slideIn 0.4s ease-out;
+    flex: 0 0 auto;
     box-sizing: border-box;
     font-weight: 500;
     padding: 5px;
@@ -92,15 +93,17 @@ body {
 
 /* Message */
 #chat div.text {
-    overflow-wrap: break-word;
     padding-left: 10px;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    text-shadow: 0 0 5px var(--text-glow);
+    background-color: rgba(36, 36, 36, 0.8);
+    color: #dfdfdf;
+    text-shadow: 0 0 5px rgba(238, 238, 238, 0.9);
+    
     border-radius: 5px;
-    margin: -26px 0 0 85px;
-    min-height: 71px;
-    align-content: center;
+    margin-top: -30px;
+    margin-left: 86px;
+
+    overflow-wrap: break-word;
+    font-size: 32;
 }
 
 /* Emotes in messages */
